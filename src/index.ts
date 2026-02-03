@@ -197,3 +197,54 @@
 
 // const c = new User("aleena", 'idfaj', 'admin');
 // c.checkRole();
+
+
+
+
+// Base class
+class BaseUser {
+  public name: string;
+  public email: string;
+  protected role: string;
+
+  constructor(name: string, email: string, role: string) {
+    this.name = name;
+    this.email = email;
+    this.role = role;
+  }
+
+  login(): void {
+    console.log(`${this.role} logged in successfully`);
+  }
+
+  checkRole(expectedRole: string): boolean {
+    return this.role === expectedRole;
+  }
+}
+
+// User class
+class User extends BaseUser {
+  constructor(name: string, email: string) {
+    super(name, email, "user");
+  }
+}
+
+// Admin class
+class Admin extends BaseUser {
+  constructor(name: string, email: string) {
+    super(name, email, "admin");
+  }
+
+  deleteUser(): void {
+    console.log("User deleted successfully by admin");
+  }
+}
+
+// Usage
+const user = new User("Aleena", "aleena@gmail.com");
+user.login();
+// user.deleteUser(); ❌ not allowed
+
+const admin = new Admin("Sharon", "sharon@gmail.com");
+admin.login();
+admin.deleteUser();
