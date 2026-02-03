@@ -54,3 +54,74 @@
 // p.mq(1);
 
 // console.log(p)
+
+
+class User {
+    
+      public name : string;
+      public email : string;
+      
+
+      constructor ( name : string,email : string ) {
+
+          this.name = name,
+          this.email = email;
+      };
+
+      login ( role : string  ) : void  {
+
+         if ( role === "user" ) {
+            
+              console.log('loggin succesfull');
+         }else {
+            throw new Error("logging unsuccessfull");
+         };
+
+      };
+
+
+};
+
+
+
+
+
+
+const u = new User('name','sharon@gmail.com');
+u.login("user");
+
+
+
+class Admin {
+
+    public name : string;
+    public email : string;
+
+
+    constructor ( name : string, email : string ) {
+
+        this.name = name;
+        this.email = email;
+    };
+
+
+    login ( role : string ) : void  {
+        
+
+        if ( role === "admin" ) {
+
+            console.log("login successfull");
+        }else {
+            console.log("login unsuccessfull");
+        }
+        ;
+    }
+
+
+};
+
+
+const a = new Admin('name',"jfklasjflk");
+a.login("admin");
+
+
