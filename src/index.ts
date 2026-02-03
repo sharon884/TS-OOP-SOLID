@@ -56,72 +56,73 @@
 // console.log(p)
 
 
-class User {
+// class User {
     
-      public name : string;
-      public email : string;
+//       public name : string;
+//       public email : string;
       
 
-      constructor ( name : string,email : string ) {
+//       constructor ( name : string,email : string ) {
 
-          this.name = name,
-          this.email = email;
-      };
+//           this.name = name,
+//           this.email = email;
+//       };
 
-      login ( role : string  ) : void  {
+//       login ( role : string  ) : void  {
 
-         if ( role === "user" ) {
+//          if ( role === "user" ) {
             
-              console.log('loggin succesfull');
-         }else {
-            throw new Error("logging unsuccessfull");
-         };
+//               console.log('loggin succesfull');
+//          }else {
+//             throw new Error("logging unsuccessfull");
+//          };
 
-      };
-
-
-};
+//       };
 
 
+// };
 
 
 
 
-const u = new User('name','sharon@gmail.com');
-u.login("user");
+
+
+// const u = new User('name','sharon@gmail.com');
+// u.login("user");
 
 
 
-class Admin {
+// class Admin {
 
-    public name : string;
-    public email : string;
-
-
-    constructor ( name : string, email : string ) {
-
-        this.name = name;
-        this.email = email;
-    };
+//     public name : string;
+//     public email : string;
 
 
-    login ( role : string ) : void  {
+//     constructor ( name : string, email : string ) {
+
+//         this.name = name;
+//         this.email = email;
+//     };
+
+
+//     login ( role : string ) : void  {
         
 
-        if ( role === "admin" ) {
+//         if ( role === "admin" ) {
 
-            console.log("login successfull");
-        }else {
-            console.log("login unsuccessfull");
-        }
-        ;
-    }
-
-
-};
+//             console.log("login successfull");
+//         }else {
+//             console.log("login unsuccessfull");
+//         }
+//         ;
+//     }
 
 
-const a = new Admin('name',"jfklasjflk");
-a.login("admin");
+// };
+
+
+// const a = new Admin('name',"jfklasjflk");
+// a.login("admin");
+
 
 
