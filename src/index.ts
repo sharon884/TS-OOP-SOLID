@@ -126,74 +126,74 @@
 
 
 
-class BaseClass {
-    public name : string;
-    public email : string;
+// class BaseClass {
+//     public name : string;
+//     public email : string;
 
-    constructor( name : string, email : string, ) {
-        this.name = name;
-        this.email = email;
-    };
-};
-
-
-
-
-class User extends BaseClass {
-
-    constructor( name : string, email : string , public role : string ) {
-        super ( name, email);
-    };
-
-
-    checkRole () : void {
-        if ( this.role == "user") {
-            console.log( 'authenticated');
-        }else {
-            console.log("not authenticated");
-        }
-    };
-
-};
+//     constructor( name : string, email : string, ) {
+//         this.name = name;
+//         this.email = email;
+//     };
+// };
 
 
 
 
-class Admin extends BaseClass {
+// class User extends BaseClass {
+
+//     constructor( name : string, email : string , public role : string ) {
+//         super ( name, email);
+//     };
+
+
+//     checkRole () : void {
+//         if ( this.role == "user") {
+//             console.log( 'authenticated');
+//         }else {
+//             console.log("not authenticated");
+//         }
+//     };
+
+// };
+
+
+
+
+// class Admin extends BaseClass {
        
     
      
-    constructor ( name : string , email : string, public role : string )  {
-         super(name, email);
-    };
+//     constructor ( name : string , email : string, public role : string )  {
+//          super(name, email);
+//     };
 
-    checkRole () : void {
+//     checkRole () : void {
 
-        if ( this.role == "admin" ) {
-            console.log('authenticated');
-        }else {
-            console.log("not authenticated");
-        }
-    };
+//         if ( this.role == "admin" ) {
+//             console.log('authenticated');
+//         }else {
+//             console.log("not authenticated");
+//         }
+//     };
 
 
-    deleteUser () : void {
+//     deleteUser () : void {
         
-         if ( this.role === "admin" ) {
-            console.log("user deletion is successfully completed");
-         }else {
-            console.log("user deletion failed due to incorrect role");
-         }
-    };
+//          if ( this.role === "admin" ) {
+//             console.log("user deletion is successfully completed");
+//          }else {
+//             console.log("user deletion failed due to incorrect role");
+//          }
+//     };
 
 
-}
+// }
 
 
 
-const b = new Admin('sharon', 'lkafd','user' );
-b.checkRole();
-b.deleteUser(); 
+// const b = new Admin('sharon', 'lkafd','user' );
+// b.checkRole();
+// b.deleteUser(); 
 
-const c = new User("aleena", 'idfaj', 'admin');
-c.checkRole();
+// const c = new User("aleena", 'idfaj', 'admin');
+// c.checkRole();
