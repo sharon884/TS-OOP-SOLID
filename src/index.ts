@@ -219,6 +219,10 @@ class BaseUser {
 
   checkRole(expectedRole: string): boolean {
     return this.role === expectedRole;
+  };
+
+  getWelcomeMessage() : void  {
+     console.log('welcome')
   }
 }
 
@@ -226,6 +230,10 @@ class BaseUser {
 class User extends BaseUser {
   constructor(name: string, email: string) {
     super(name, email, "user");
+  };
+
+  getWelcomeMessage(): void {
+      console.log('welcome user')
   }
 }
 
@@ -238,13 +246,23 @@ class Admin extends BaseUser {
   deleteUser(): void {
     console.log("User deleted successfully by admin");
   }
+
+  getWelcomeMessage(): void {
+      console.log("welcome admin");
+  }
 }
 
 // Usage
 const user = new User("Aleena", "aleena@gmail.com");
 user.login();
+user.getWelcomeMessage()
 // user.deleteUser(); ❌ not allowed
 
 const admin = new Admin("Sharon", "sharon@gmail.com");
 admin.login();
 admin.deleteUser();
+admin.getWelcomeMessage();
+
+
+
+
