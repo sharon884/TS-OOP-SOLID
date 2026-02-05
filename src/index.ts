@@ -1,3 +1,5 @@
+
+
 // // class Product {
 
 // //   public name : string;
@@ -271,13 +273,18 @@
 // admin.deleteUser();
 // admin.getWelcomeMessage();
 
-function add ( a : number , b : number  )  : number {
-   return a+b;
-};
+// function add ( a : number , b : number  )  : number {
+//    return a+b;
+// };
 
 
-console.log(add(2,3));
+// console.log(add(2,3));
 
 
 
 
+// function sum ( a,b ) {
+//   return a + b;
+// };
+
+// sum(1,"2");
