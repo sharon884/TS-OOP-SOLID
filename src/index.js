@@ -1,1 +1,2 @@
-console.log(perso n)
+let a = "sharon";
+console.log(typeof a)

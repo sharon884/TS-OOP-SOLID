@@ -1,5 +1,16 @@
-let varible : number | string;
+function accept ( value : number | string ) : void {
+  
+    if ( typeof value == "number" ) {
+        
+         
+          console.log( value.toFixed(2));
+         
 
-varible = 20;
-varible = "sharon";
-varible = true;
+    }else {
+      console.log(value.toUpperCase());
+    }
+
+
+};
+
+accept("sharon")
