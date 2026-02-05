@@ -1,11 +1,5 @@
-interface User { 
-  name : string;
-};
+let varible : number | string;
 
-
-function printUser ( user : User, age :number ) : void {
-  console.log(user.name);
-  console.log(age)
-};
-
-let v = printUser({ name:"sharon" }, 20)
+varible = 20;
+varible = "sharon";
+varible = true;
