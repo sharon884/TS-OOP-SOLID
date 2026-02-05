@@ -1,2 +1,2 @@
-let a = "sharon";
+let a = null
 console.log(typeof a)
