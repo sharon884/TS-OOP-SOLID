@@ -1,8 +1,10 @@
-type user  = number;
-let id : user;
+interface User {
+  name : string;
+};
 
-id = 0;
-// id = "sharon"
 
-type user = string;
+interface User {
+  age : number;
+};
+
 
