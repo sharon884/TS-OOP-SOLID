@@ -1,11 +1,5 @@
-interface f {
-   name : string;
-};
+type user  = number;
+let id : user;
 
-function user ( param : f ) : void {
-    console.log(param.name);
-};
-
-user ( { name : 'champ'} );
-
-user ({ name : "sharon", age : 20 });
+id = 0;
+id = "sharon"
