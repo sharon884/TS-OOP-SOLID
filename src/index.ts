@@ -1,54 +1,59 @@
-// let studentName = "Rahul";
-// let totalFee = 5000;
-// let paidAmount = 0;
+// class Student {
+//   name: string;
+
+//   constructor(name: string) {
+//     this.name = name;
+//   }
+
+//   getRole() {
+//     console.log("I am a student");
+//   }
+// }
+
+// class Teacher {
+//   name: string;
+
+//   constructor(name: string) {
+//     this.name = name;
+//   }
+
+//   getRole() {
+//     console.log("I am a teacher");
+//   }
+// }
 
 
-// function payFee(amount: number) {
-//   paidAmount = amount;
-// };
+class Student {
+    public name : string;
 
-// function printReceipt() {
-//   console.log(studentName);
-//   console.log(paidAmount);
-// };
+    constructor( name: string ) {
+        this.name = name;
+    };
 
-
-
-class Std {
-    
-   public studentName : string;
-    private totalFee : number;
-   private paidAmount : number
-
-
-   constructor ( studentName : string, totalFee : number  ) {
-       this.studentName = studentName;
-       this.totalFee = totalFee;
-    
-   };
-
-
-   payAmount ( amount : number ) : void {
-     if ( amount >  0)  {
-          this.paidAmount = this.paidAmount + amount;
-     }else{
-        console.log("amount is less than 0");
-     }
-   };
-
-
-   printReciept () : void {
-      console.log(this.studentName);
-      console.log(this.totalFee);
-      console.log(this.paidAmount);
-   }
+    print( ) : void  {
+         console.log( " i am student " );
+    };
 };
 
 
 
-let std1 = new Std("sharon",5000);
+class Teacher extends Student {
+       age : number ;
 
-console.log(std1);
-std1.payAmount(5000);
-std1.printReciept;
-std1.totalFee;
+       constructor ( name : string , age : number ) {
+        super(name);
+        this.age = age;
+       };
+
+
+       print() : void  {
+             console.log( "i am teacher");
+       }
+};
+
+
+
+let s = new Student("sharon");
+let h = new Teacher("aleena",26);
+s.print();
+h.print();
