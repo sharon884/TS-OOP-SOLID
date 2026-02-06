@@ -101,11 +101,21 @@
 
 
 
-type User =  {
+// type User =  {
+//     name : string;
+//     age : number;
+// };
+
+
+// let user : User = { name: "sharon",age:0};
+// let user2 : User = { name : 30,age:"sharong"};
+
+
+interface User {
     name : string;
     age : number;
 };
 
 
-let user : User = { name: "sharon",age:0};
-let user2 : User = { name : 30,age:"sharong"};
+const user : User = { name : "sahor", age : 30};
+const user1 : User = { name : 39, age : ""}
