@@ -1,33 +1,42 @@
+
+
 class Employee {
+    calculateBonus(): number {
 
+        return 0;
+    }
 
-    private salary : number;
-
-
-     constructor ( amount : number ) {
-         this.salary = amount;
-     }
-
-
-
-     public increaseSalary ( amount : number ) :void {
-           if ( amount < 0  ) {
-              return console.log(" amount is less than 0 . Operation failed")
-           };
-
-           this.salary = this.salary + amount;
-     };
+}
 
 
 
-     public getSalary () : number {
-           return this.salary;
-     };
+
+class Developer extends Employee {
+
+    private salary: number = 20200;
+
+ calculateBonus(): number {
+        return this.salary * 0.1;
+    }
+
+    public printBonus( emp : Employee ) {
+         return this.calculateBonus();
+    }
+
 };
 
 
+class Manager extends Employee {
+    private salary: number = 300000;
 
-const obj = new Employee(1000);
-obj.increaseSalary(2000);
-console.log(obj.getSalary());
+    calculateBonus(): number {
+        return this.salary * 0.2;
+    }
+};
 
+
+const dev = new Developer();
+console.log( dev.printBonus(dev));
+
+const mang = new Manager();
+console.log(mang.calculateBonus());
