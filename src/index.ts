@@ -96,26 +96,60 @@
 
 
 
-interface  Show {
-     who () : void  ;
- };
+// interface  Show {
+//      who () : void  ;
+//  };
 
 
- class Dog implements Show {
-    who(): void {
-        console.log("am a dog");
-    }  
- };
+//  class Dog implements Show {
+//     who(): void {
+//         console.log("am a dog");
+//     }  
+//  };
 
- class Cat implements Show {
-     who(): void {
-         console.log("am a cat");
+//  class Cat implements Show {
+//      who(): void {
+//          console.log("am a cat");
+//      }
+//  };
+
+
+//  class Cow implements Show {
+//      who(): void {
+//           console.log("am a cow");
+//      }
+//  }
+
+
+class Parrent {
+     show () : void  {
+         console.log("am parrent of you")
      }
- };
+};
 
 
- class Cow implements Show {
-     who(): void {
-          console.log("am a cow");
-     }
- }
+class Child extends  Parrent {
+     who (): void {
+         console.log("am child");
+     };
+
+};
+
+ 
+class GrandChild extends Child {
+       showYou () : void {
+         console.log("am grandChild")
+       };
+
+
+}
+
+
+
+const c =  new Child();
+c.show();
+
+
+const f  = new GrandChild();
+f.who();
+
