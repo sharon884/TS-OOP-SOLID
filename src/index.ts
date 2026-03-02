@@ -34,37 +34,62 @@
 
 
 
-interface CalculateArea {
+// interface CalculateArea {
 
-    area(length: number, Width: number): number;
+//     area(length: number, Width: number): number;
+// };
+
+
+
+// class Circle implements CalculateArea {
+//     area(length: number, Width: number): number {
+
+//         let result;
+//         result = length * Width;
+
+//         return result
+//     }
+// };
+
+
+// class Rectangle implements CalculateArea {
+//      area(length: number, Width: number): number {
+//          let sum ;
+//          sum = length * Width;
+//          return sum;
+//      }
+// };
+
+
+
+
+// const circle = new Circle();
+// const rectangle = new Rectangle();
+
+// console.log(circle.area(10,45));
+// console.log(rectangle.area(20,20));
+
+
+abstract class Payment {
+     abstract pay( amount : number) : void;
 };
 
 
-
-class Circle implements CalculateArea {
-    area(length: number, Width: number): number {
-
-        let result;
-        result = length * Width;
-
-        return result
-    }
-};
-
-
-class Rectangle implements CalculateArea {
-     area(length: number, Width: number): number {
-         let sum ;
-         sum = length * Width;
-         return sum;
+class creditCard extends Payment {
+     pay(amount: number): void {
+         console.log("credit card payment completed rs " + amount);
      }
 };
 
 
+class UPI extends Payment {
+     pay(amount: number): void {
+         console.log('credit card payment completed rs ' + amount);
+     }
+}
 
+const payment : Payment = new creditCard();
+payment.pay(100);
 
-const circle = new Circle();
-const rectangle = new Rectangle();
-
-console.log(circle.area(10,45));
-console.log(rectangle.area(20,20));
+const payment2 : Payment = new UPI();
+payment.pay(200);
