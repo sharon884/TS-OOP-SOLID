@@ -70,26 +70,52 @@
 // console.log(rectangle.area(20,20));
 
 
-abstract class Payment {
-     abstract pay( amount : number) : void;
-};
+// abstract class Payment {
+//      abstract pay( amount : number) : void;
+// };
 
 
-class creditCard extends Payment {
-     pay(amount: number): void {
-         console.log("credit card payment completed rs " + amount);
+// class creditCard extends Payment {
+//      pay(amount: number): void {
+//          console.log("credit card payment completed rs " + amount);
+//      }
+// };
+
+
+// class UPI extends Payment {
+//      pay(amount: number): void {
+//          console.log('credit card payment completed rs ' + amount);
+//      }
+// }
+
+// const payment : Payment = new creditCard();
+// payment.pay(100);
+
+// const payment2 : Payment = new UPI();
+// payment.pay(200);
+
+
+
+interface  Show {
+     who () : void  ;
+ };
+
+
+ class Dog implements Show {
+    who(): void {
+        console.log("am a dog");
+    }  
+ };
+
+ class Cat implements Show {
+     who(): void {
+         console.log("am a cat");
      }
-};
+ };
 
 
-class UPI extends Payment {
-     pay(amount: number): void {
-         console.log('credit card payment completed rs ' + amount);
+ class Cow implements Show {
+     who(): void {
+          console.log("am a cow");
      }
-}
-
-const payment : Payment = new creditCard();
-payment.pay(100);
-
-const payment2 : Payment = new UPI();
-payment.pay(200);
+ }
