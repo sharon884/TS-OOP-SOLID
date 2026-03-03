@@ -1,9 +1,14 @@
 type Person = {
     name : string;
+    age : number;
+
 };
 
-type Person = {
-     age : number;
-};
+
+const p : Person = {
+     name : "sharon",
+    //  age : 46
+}
+
 
 
