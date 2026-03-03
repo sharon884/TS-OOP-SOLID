@@ -15,6 +15,14 @@ function greetUser ( name : string = "Guest" ) : string {
 
 
 
+function sum ( ...numbers : number[] ) : number {
+       let result : number = 0;
+     result =  numbers.reduce((acc,num) => acc + num,0);
+
+     return result;
+};
+
+
 
 
 
