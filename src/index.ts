@@ -5,13 +5,10 @@ type user  = {
 
 };
 
-type doduo = Readonly<Omit<user,"name">>;
+ type updateUser = Partial<user>;
+ type pickone = Pick<user , "name" | "age" >;
 
-const u : doduo = {
-     city : "sharon",
-     age : 49,
-     
-}
+ 
 
 
 
