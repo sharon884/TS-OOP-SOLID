@@ -1,12 +1,23 @@
-let value : unknown = "hellow";
-value.toUpperCase()
+interface Person {
+    name : string,
+};
+
+interface Person {
+     age : number
+};
+
+interface Person {
+     city : string
+};
 
 
-if ( typeof value === "string") {
-    value.toUpperCase();
-}
 
-let check : any ;
-check = 43;
-check.toUpperCase();
 
+const p : Person  = {
+     name : "sharon",
+     age : 24,
+     city : "kochi",
+};
+
+
+console.log(p)
