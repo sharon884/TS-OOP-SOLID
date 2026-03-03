@@ -1,23 +1,9 @@
-interface Person {
-    name : string,
+type Person = {
+    name : string;
 };
 
-interface Person {
-     age : number
-};
-
-interface Person {
-     city : string
+type Person = {
+     age : number;
 };
 
 
-
-
-const p : Person  = {
-     name : "sharon",
-     age : 24,
-     city : "kochi",
-};
-
-
-console.log(p)
