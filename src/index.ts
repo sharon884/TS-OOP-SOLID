@@ -1,14 +1,6 @@
-type user  = {
-     name : string;
-     city : string;
-     age : 49;
-
+function add ( a : number, b : number ) : number {
+      return a + b;
 };
-
- type updateUser = Partial<user>;
- type pickone = Pick<user , "name" | "age" >;
-
- 
 
 
 
