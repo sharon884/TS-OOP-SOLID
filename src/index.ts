@@ -1,9 +1,25 @@
-function calculateArea ( radius : number ) : number {
-     let area = 3.14;
-     area = area * radius * radius;
-     return area;
-
+type user = {
+     name : string;
+     role : string;
 };
 
 
-console.log(calculateArea(5));
+function createUser ( name : string, role : string = "user" ) : user {
+
+     let u : user = {
+           name : name,
+           role : role,
+     };
+
+     return u;
+
+
+       
+};
+
+
+console.log(createUser("Champ")); 
+// { name: "Champ", role: "user" }
+
+console.log(createUser("Champ", "admin")); 
+// { name: "Champ", role: "admin" }
