@@ -1,25 +1,15 @@
-type user = {
-     name : string;
-     role : string;
+function getAverage(...numbers : number[] ) :number {
+      let sum : number;
+      let avg : number ;
+      sum = numbers.reduce((acc,num) => acc + num,0);
+      avg = sum / numbers.length;
+      return avg ? avg : 0;
 };
 
 
-function createUser ( name : string, role : string = "user" ) : user {
+console.log(
+     getAverage(10, 20, 30)// 20
+// 0
+)
 
-     let u : user = {
-           name : name,
-           role : role,
-     };
-
-     return u;
-
-
-       
-};
-
-
-console.log(createUser("Champ")); 
-// { name: "Champ", role: "user" }
-
-console.log(createUser("Champ", "admin")); 
-// { name: "Champ", role: "admin" }
+console.log(getAverage());
