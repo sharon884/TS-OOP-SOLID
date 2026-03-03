@@ -28,5 +28,3 @@ function sum ( ...numbers : number[] ) : number {
 const arrow = ( a:number , b : number ) : number => {
       return a +b ;
 };
-
-
