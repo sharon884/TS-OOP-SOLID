@@ -1,6 +1,2 @@
-let value : string | number | boolean;
-value = "sharon";
-
-value = 46;
-value = false;
-value = {}
+let status : "success" | "error";
+status = "success";
