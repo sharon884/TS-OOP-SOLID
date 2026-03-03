@@ -1,14 +1,5 @@
-type Person = {
-    name : string;
-    age : number;
+let value : string | number | boolean;
+value = "sharon";
 
-};
-
-
-const p : Person = {
-     name : "sharon",
-     age : 46
-}
-
-
-
+value = 46;
+value = false;
