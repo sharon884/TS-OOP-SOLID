@@ -3,3 +3,4 @@ value = "sharon";
 
 value = 46;
 value = false;
+value = {}
