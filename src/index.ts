@@ -7,7 +7,7 @@ type Person = {
 
 const p : Person = {
      name : "sharon",
-    //  age : 46
+     age : 46
 }
 
 
