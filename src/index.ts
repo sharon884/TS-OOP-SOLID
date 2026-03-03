@@ -8,5 +8,13 @@ function greet  ( name : string, age ? : number ) : string {
 };
 
 
+function greetUser ( name : string = "Guest" ) : string {
+      return  `helow ${name}`;
+};
+
+
+
+
+
 
 
