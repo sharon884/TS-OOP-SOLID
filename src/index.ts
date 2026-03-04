@@ -1,52 +1,17 @@
-// const myPromise = new Promise<string>((resolve, reject) => {
-//      let success = true;
-
-//      if (success) {
-//           resolve("data received");
-//      };
+function get<T> ( value : T ) : T {
+     return value;
+};
 
 
-//      if (!success) {
-//           reject(" data not recevied ");
-//      }
-// });
+console.log(get(3));
+console.log(get("sharon"));
+console.log(get(false));
+console.log(get([3,45,6]));
 
 
+// function getNumber ( value : number ) : number {
+//      return value;
+// };
 
-
-// myPromise.then((data) => {
-//      console.log(data);
-// }).catch((error) => {
-//      console.log(error);
-// }).finally(() => {
-//      console.log("operation finished");
-// });
-
-
-const practise = new Promise <number> (( resolve, reject ) => {
-     let success : boolean;
-
-       setTimeout(()=> {
-           console.log("hai");
-            success = true;
-
-             if ( success ) {
-          resolve(4);
-       }else {
-           reject(5)
-       }
-       },1000);
-
-      
-});
-
-
-practise.then((data) => {
-      console.log("resolved",data);
-}).catch((error) => {
-      console.log("error",error);
-}).finally(()=> {
-      console.log("finshed");
-});
-
-
+// console.log(getNumber(8));
+// console.log(getNumber("dsdf"))
