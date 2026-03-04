@@ -1,15 +1,25 @@
-function getAverage(...numbers : number[] ) :number {
-      let sum : number;
-      let avg : number ;
-      sum = numbers.reduce((acc,num) => acc + num,0);
-      avg = sum / numbers.length;
-      return avg ? avg : 0;
-};
+const myPromise = new Promise<string>((resolve, reject) => {
+     let success = true;
+
+     if (success) {
+          resolve("data received");
+     };
 
 
-console.log(
-     getAverage(10, 20, 30)// 20
-// 0
-)
+     if (!success) {
+          reject(" data not recevied ");
+     }
+});
 
-console.log(getAverage());
+
+
+
+myPromise.then((data) => {
+     console.log(data);
+}).catch((error) => {
+     console.log(error);
+}).finally(() => {
+     console.log("operation finished");
+});
+
+
