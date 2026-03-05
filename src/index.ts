@@ -1,8 +1,19 @@
-type c <T> = T extends string ? "yes" : "No";
+class User {
+    name : string;
+    email : string;
+
+    constructor ( name : string , email : string ) {
+        this.name = name;
+        this.email = email;
+    };
 
 
-type a = c<string>
-type b = c<number>
+    getUserInfo() : string {
+        return `$name is ${this.name} age is ${this.email }`
+    }
+};
 
 
-
+const user1 = new User("sharon", "sharon@gmail.com");
+console.log(user1);
+console.log(user1.getUserInfo());
