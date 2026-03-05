@@ -1,19 +1,18 @@
-class User {
-    name : string;
-    email : string;
-
-    constructor ( name : string , email : string ) {
-        this.name = name;
-        this.email = email;
-    };
-
-
-    getUserInfo() : string {
-        return `$name is ${this.name} age is ${this.email }`
-    }
+class Product {
+     title : string;
+     price : number ;
+     
+     constructor ( title : string, price : number ) {
+          this.title = title;
+          this.price = price ;
+     };
+     
+     getProduct () : string {
+          return ` Product : ${this.title} - Price ${this.price}`
+     };
 };
 
 
-const user1 = new User("sharon", "sharon@gmail.com");
-console.log(user1);
-console.log(user1.getUserInfo());
+const product = new Product("Laptop", 40000);
+console.log(product);
+console.log(product.getProduct())
